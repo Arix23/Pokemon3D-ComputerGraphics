@@ -23,7 +23,8 @@ const loader = new GLTFLoader();
 renderer.setClearColor(0xffffff, 1)
 
 
-//Creación del domo de cielo
+//Creación del domo de cielo, para esto creamos una geometría esférica
+// y añadimos nuestra textura de cielo
 
 var skyGeo = new THREE.SphereGeometry(100000, 25, 25);
 var textureLoader = new THREE.TextureLoader(),
@@ -37,6 +38,7 @@ var material = new THREE.MeshBasicMaterial({
   map: texture,
 });
 
+// Se crea el cielo con la geometría y el material
 var sky = new THREE.Mesh(skyGeo, material);
 sky.material.side = THREE.BackSide;
 scene.add(sky);
@@ -47,14 +49,14 @@ camera.position.y = 2
 
 
 //Creación del pasto
+//Se añade la textura
 var loaderPlane = new THREE.TextureLoader();
 const texturePasto = loaderPlane.load("/pasto/Pasto.jpeg");
 texturePasto.wrapS = THREE.RepeatWrapping;
 texturePasto.wrapT = THREE.RepeatWrapping;
 texturePasto.repeat.set(70, 70);
 
-
-
+// Se genera el plano y se ajusta
 const planeGeometry = new THREE.PlaneGeometry(300, 300, 10, 10);
 
 planeGeometry.rotateX(-1.58);
@@ -78,6 +80,7 @@ renderer.shadowMapSoft = true;
 
 
 //Importación del modelo de Pikachu y se agrega a la escena.
+// También se agrega la animación del pikachu
 loader.load('/pikachu/scene.gltf', function (gltf) {
   mixer = new THREE.AnimationMixer( gltf.scene );
   console.log(gltf.animations[1]);
@@ -104,6 +107,7 @@ loader.load('/blenderassets/pino.glb', function (gltf) {
   var clone = gltf.scene.clone();
 
   //Se genera un for para poblar la escena con varios pinos
+  //Se clonan los pinos y se les asigna una posición random
   for (let i = 0; i < 60; i++) {
     clone = gltf.scene.clone();
     let x = Math.floor(Math.random() * (100 - -100)) + -100;
@@ -139,7 +143,8 @@ loader.load('/blenderassets/arbol3.glb', function (gltf) {
   gltf.scene.position.z = 0;				    //Position (z = front +, back-)
 
   var clone = gltf.scene.clone();
-  //Se genera un for para poblar la escena con varios arboles
+  //Se genera un for para poblar la escena con varios árboles
+  //Se clonan los árboles y se les asigna una posición random
   for (let i = 0; i < 60; i++) {
     clone = gltf.scene.clone();
     let x = Math.floor(Math.random() * (100 - -100)) + -100;
@@ -175,7 +180,8 @@ loader.load('/blenderassets/arbol2.glb', function (gltf) {
   gltf.scene.position.z = 0;				    //Position (z = front +, back-)
 
   var clone = gltf.scene.clone();
-  //Se genera un for para poblar la escena con varios arboles
+  //Se genera un for para poblar la escena con varios árboles
+  //Se clonan los árboles y se les asigna una posición random
   for (let i = 0; i < 60; i++) {
     clone = gltf.scene.clone();
     let x = Math.floor(Math.random() * (100 - -100)) + -100;
@@ -226,6 +232,7 @@ rgbeLoader.load('https://threejs.org/examples/textures/equirectangular/venice_su
 });
 var mixer2;
 //Se agrega la pokebola a escena y se importa
+// Se agrega también la animación de esta
 loader.load('/pokeball/scene.gltf', function (gltf) {
   mixer2 = new THREE.AnimationMixer( gltf.scene );
   var animation = mixer2.clipAction(gltf.animations[0])
@@ -233,7 +240,7 @@ loader.load('/pokeball/scene.gltf', function (gltf) {
   animation.clampWhenFinished = true;
   animation.enable = true;
   animation.play()
-        
+
   gltf.scene.scale.set(0.4, 0.4, 0.4);
   gltf.scene.position.x = 1;				    //Position (x = right+ left-)
   gltf.scene.position.y = 0.5;				    //Position (y = up+, down-)
@@ -250,11 +257,12 @@ loader.load('/pokeball/scene.gltf', function (gltf) {
 
 
 //LUCES TEMPORALES
-
+// Se añaden las luces a nuestra escena
 var ambient = new THREE.AmbientLight(0xEC8950, 0.7);
 const directionalLight = new THREE.DirectionalLight(0xDF834E, 0.5);
 directionalLight.position.set(5, 10, -10);
 var side = 100;
+// Ajuste de las sombras
 directionalLight.shadow.camera.top = side;
 directionalLight.shadow.camera.bottom = -side;
 directionalLight.shadow.camera.left = side;
@@ -268,9 +276,9 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 function animate() {
   requestAnimationFrame( animate );
-  
+
   var delta = clock.getDelta();
-  
+
   if ( mixer ) mixer.update( delta );
   if ( mixer2 ) mixer2.update( delta );
 
