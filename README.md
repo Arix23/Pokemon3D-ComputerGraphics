@@ -2,6 +2,9 @@
 
 Project dedicated to creating a scene inspired on the Pokemon game using Three.js for our Computer Graphics class
 
+![imagen](https://user-images.githubusercontent.com/54066974/152616799-745af59b-1bce-4277-afd6-025ccdbf35ca.png)
+![imagen](https://user-images.githubusercontent.com/54066974/152616870-139cbbba-47e6-4bb3-8f60-35b6b355c89b.png)
+
 En este proyecto crearemos una escena inspirada en el video juego *Pokémon GO* usando Three.js para nuestra clase de Gráficas Computacionales
 ###### Integrantes del equipo:
 - Ari Valenzuela - A01635584
@@ -22,24 +25,23 @@ La escena consiste en un área verde donde se encuentra un Pikachu. Al igual que
 
 ## Animaciones
 Las animaciones principales son:
-- **Lanzamiento de pokebola:** Función el lanzamiento de una pokebola para intentar cachar al Pikachu que se encuentra en la escena. Esta acción se activará con la tecla `[ENTER]`.
-- **Captura de Pokemon:** Al igual que en el video juego, cuando el usuario logra atrapar al pokemón se mostrará una animación de luz y estrella para indicar captura exitosa.
-- **Movimiento de Pikachu:** (Tal vez) Pequeños movimientos que tendrá el modelo de Pikachu como movimiento de orejas y de cabeza. Animación a considerar dependiendo de los assets que podamos encontrar.
+- **Pokebola:** La pokebola tiene una pequeña animación en la que se abre y se inclina de un lado a otro.
+- **Movimiento de Pikachu:** Dentro de las animaciones implementadas está Pikachu bailando con movimientos de brazos, torso, piernas y cabeza.
 
 ## Tecnologías
-Para este proyecto utilizaremos las siguientes tecnologías:
+Para este proyecto utilizamos las siguientes tecnologías:
 - three.js
 - WebGL
-- Blender (tal vez)
+- Blender
 
-## Componentes planeados
-Los componentes planeados para esta escena son
+## Componentes
+Los componentes utilizados para esta escena son
 - Pikachu
 - Pokebola
-- Arboles de fondo
+- Arboles de fondo - assets hechos por el equipo en blender
 - Piso de pasto
 - Luz imitando la luz solar a medio día
-- Entrenador Pokemon (Tal vez)
+- Sombras
 
 
 ## Referencias usadas:
@@ -57,3 +59,5 @@ Los componentes planeados para esta escena son
 ![imagen](https://user-images.githubusercontent.com/54066974/149452558-66fecd45-5f40-4855-85d8-c8bc7ec5c126.png)
 
 ![imagen](https://user-images.githubusercontent.com/54066974/149452588-af03a3c1-3683-4d6e-b431-019edd040b23.png)
+
+
