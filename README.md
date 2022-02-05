@@ -5,7 +5,7 @@ Project dedicated to creating a scene inspired on the Pokemon game using Three.j
 ![imagen](https://user-images.githubusercontent.com/54066974/152616799-745af59b-1bce-4277-afd6-025ccdbf35ca.png)
 ![imagen](https://user-images.githubusercontent.com/54066974/152616870-139cbbba-47e6-4bb3-8f60-35b6b355c89b.png)
 
-En este proyecto crearemos una escena inspirada en el video juego *Pokémon GO* usando Three.js para nuestra clase de Gráficas Computacionales
+En este proyecto creamos una escena inspirada en el video juego *Pokémon GO* usando Three.js para nuestra clase de Gráficas Computacionales
 ###### Integrantes del equipo:
 - Ari Valenzuela - A01635584
 - Carolina Pérez - A01631526
@@ -38,7 +38,7 @@ Para este proyecto utilizamos las siguientes tecnologías:
 Los componentes utilizados para esta escena son
 - Pikachu
 - Pokebola
-- Arboles de fondo - assets hechos por el equipo en blender
+- Arboles de fondo - assets hechos por el equipo en blender, los archivos originales en blender están en la carpeta llamada blender-assets-originales
 - Piso de pasto
 - Luz imitando la luz solar a medio día
 - Sombras
@@ -51,6 +51,7 @@ Los componentes utilizados para esta escena son
 - De dónde obtuvimos la textura del cielo: https://3djungle.net/textures/sky/5931/
 - Tutorial usado para crear los árboles en blender: https://www.youtube.com/watch?v=p-9pgZI3inI&t=122s&ab_channel=GrantAbbitt
 - Tutorial de conceptos clave de Three.js: https://www.youtube.com/watch?v=YK1Sw_hnm58
+- Tutorial para animar los assets importados: https://discourse.threejs.org/t/easiest-way-to-play-skeletal-animation-from-gltf/7792/3
 - Documentación de Three.js
 
 
